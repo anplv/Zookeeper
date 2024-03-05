@@ -1,0 +1,79 @@
+<h2>Arithmetic operations</h2>
+<div class="step-text">
+<p>We often perform <a class="theory-lookup" href="/learn/step/10776" rel="noopener noreferrer nofollow" target="_blank" title="An arithmetic operation in Kotlin refers to the process of performing mathematical calculations such as addition, subtraction, multiplication, division, and modulo division on one or more values or variables. | These operations are typically represented by special symbols called operators, which take two operands (the values or variables being operated on) and produce a result. For example, in the expression `5 + 3`, `5` and `3` are the operands, and `+` is the addition operator. The result of this operation would be `8`.">arithmetic operations</a> in our daily life. We need to calculate the change, measure the area of a room, count the number of people in a queue, and so on. The computer can help us with these operations.</p>
+<h5 id="binary-operators" style="text-align: center;">Binary operators</h5>
+<p>Kotlin has five <a class="theory-lookup" href="/learn/step/10776" rel="noopener noreferrer nofollow" target="_blank" title="An arithmetic operator in Kotlin is a symbol that performs a mathematical operation on one or two operands (values or variables). | Kotlin has five arithmetic operators: addition (+), subtraction (-), multiplication (*), division (/), and modulo division (%). These operators are binary, meaning they take two operands. The assignment operator (=) is also considered an arithmetic operator, as it can be combined with other arithmetic operations to create compound assignment operations, such as += and -=.">arithmetic operators</a>:</p>
+<ul>
+<li>addition <code class="language-kotlin">+</code></li>
+<li><a class="theory-lookup" href="/learn/step/22102" rel="noopener noreferrer nofollow" target="_blank" title="Subtraction in Kotlin is a basic arithmetic operation that involves the reduction of a number by another number. | It is denoted by the '-' symbol. Subtraction is used to find the difference between two numbers, where the minuend is the number being subtracted from, and the subtrahend is the number being subtracted. In Kotlin, subtraction can be performed on any numeric data type, including Int, Double, and Float.">subtraction</a> <code class="language-kotlin">-</code></li>
+<li><a class="theory-lookup" href="/learn/step/4652" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, multiplication is a basic arithmetic operation that can be performed using the `*` operator. | It allows you to multiply two numbers together. For example, if you have two variables `a` and `b`, you can multiply them by writing `a * b`. The result of this operation will be the product of `a` and `b`. It's important to note that multiplication in Kotlin follows the same rules as multiplication in mathematics.">multiplication</a> <code class="language-kotlin">*</code></li>
+<li>integer <a class="theory-lookup" href="/learn/step/22102" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, division is the operation of dividing one number by another. | The default division in Kotlin is Euclidean division, where the dividend is divided by the divisor to get the quotient. The remainder can also be calculated using the formula: remainder = dividend - divisor * quotient. If the dividend is a negative number, the division result will also be negative.">division</a> <code class="language-kotlin">/</code></li>
+<li>modulus <code class="language-kotlin">%</code></li>
+</ul>
+<p>These operators are binary, which means they take two values as operands. The operand is the value or <a class="theory-lookup" href="/learn/step/4371" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, a variable is a storage for a value, which can be a string, a number, or something else. | Every variable has a name (or an identifier) to distinguish it from other variables. You can access a value by the name of the variable. Variables are one of the most often used elements in programming, so it is important to understand how to use them. Before you can start using a variable, you must declare it. To declare a variable, Kotlin provides two keywords: `val` and `var`.">variable</a> the operator is being applied to. For example, in expression 1 + 3, 1 and 3 are the operands, and + is the operator.</p>
+<p>The piece of code below prints the results of <strong>addition</strong>, <strong>subtraction</strong>, and <strong>multiplication</strong>:</p>
+<pre><code class="language-kotlin">println(13 + 25) // prints 38
+println(20 + 70) // prints 90
+
+println(70 - 30) // prints 40
+println(30 - 70) // prints -40
+
+println(21 * 3)  // prints 63
+println(20 * 10) // prints 200</code></pre>
+<p>The <code class="language-kotlin">/</code> operator <strong><a class="theory-lookup" href="/learn/step/22102" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, the divide operator is denoted by the forward slash (/). | It performs division on two numbers and returns the quotient. The division operator in Kotlin follows the Euclidean division formula, which states that any number can be represented by three others: the dividend, the divisor, the quotient, and the remainder.">divides</a></strong> the integer parts of two numbers; the fractional part is discarded. You may read about modulo division in our <a href="https://hyperskill.org/learn/step/10586" rel="noopener noreferrer nofollow" target="_blank">topic</a>.</p>
+<pre><code class="language-kotlin">println(8 / 3)  // prints 2
+println(41 / 5) // prints 8</code></pre>
+<p>The <code class="language-kotlin">%</code> operator finds the <strong><a class="theory-lookup" href="/learn/step/22102" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, the remainder is calculated as the dividend minus the divisor times the quotient. | The dividend is the number being divided, the divisor is the number it is being divided by, and the quotient is the result of the division. The remainder is the value that is left over after the division is performed. It is also sometimes referred to as the modulus or the remainder of a division operation.">remainder</a></strong> of a division:</p>
+<pre><code class="language-kotlin">println(10 % 3) // prints 1 because 10 divided by 3 leaves a remainder of 1
+println(12 % 4) // prints 0 because 12 divided by 4 leaves no remainder</code></pre>
+<p>As you may know, division with <a class="theory-lookup" href="/learn/step/14438" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, a negative number is a number less than zero. | It can be represented with a minus (-) sign before the number. For example, -5 is a negative number.">negative numbers</a> is different. You may read our <a href="https://hyperskill.org/learn/step/22102" rel="noopener noreferrer nofollow" target="_blank">topic </a>to find more about the different types of division. </p>
+<h5 id="complex-expressions" style="text-align: center;">Complex expressions</h5>
+<p>You can combine arithmetic operations to write <a class="theory-lookup" href="/learn/step/26442" rel="noopener noreferrer nofollow" target="_blank" title="A complex expression in Kotlin is a combination of multiple expressions that are evaluated together to produce a single result. | It is created by using various operators, functions, and statements to manipulate and combine values, resulting in a more intricate and sophisticated outcome. Complex expressions can enhance code readability and maintainability by reducing the need for temporary variables and simplifying logical flow. They can also improve performance by minimizing the number of intermediate steps and memory allocations.">complex expressions</a>:</p>
+<pre><code class="language-kotlin">println(1 + 3 * 4 - 2) // prints 11</code></pre>
+<p>The calculation order coincides with the rules of arithmetic operations. Multiplication has a higher <a class="theory-lookup" href="/learn/step/10776" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, precedence refers to the order in which operators are evaluated when they appear in an expression without parentheses. | It determines how operands are grouped. For instance, the logical operators NOT, XOR, AND, and OR have a specific precedence that dictates how they are evaluated. This concept is crucial for writing clear and concise code, as it ensures that operations are carried out in the intended order. By understanding operator precedence, developers can avoid ambiguity and potential errors in their code.">priority</a> than addition or subtraction, so <code class="language-kotlin">3 * 4</code> is calculated first.</p>
+<p> </p>
+<p>Consider an expression as a part of code that produces a value (for example, <code class="language-kotlin">14 + 5</code> or <code class="language-kotlin">15 - 3 * 4</code>). Further, we will take a closer look at expressions.</p>
+<p> </p>
+<p>Use <strong>parentheses </strong>to specify the order of execution.<strong> </strong>Let's take a look at the example below:</p>
+<pre><code class="language-kotlin">println((1 + 3) * (4 - 2)) // prints 8
+</code></pre>
+<p><a class="theory-lookup" href="/learn/step/4525" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, parentheses can be used to change the order of execution of expressions. | They can be used to group variables and operators together in a specific way, which can be useful when there are multiple operators with different precedence levels in an expression. Parentheses can also be used to make code more readable by clarifying the intended grouping of variables and operators.">Parentheses</a> can be nested. You can also use them to simplify the notation.</p>
+<p>For example, here is a program that prints all digits of the number <code class="language-kotlin">54</code> in reverse order. We will use arithmetic operations to extract the digits.</p>
+<pre><code class="language-kotlin">fun main() {
+    println(54 % 10) // it prints 4
+    println((54 / 10) % 10) // it prints 5
+}</code></pre>
+<p>The program outputs:</p>
+<pre><code class="language-no-highlight">4
+5</code></pre>
+<h5 id="unary-operators" style="text-align: center;">Unary operators</h5>
+<p>A <a class="theory-lookup" href="/learn/step/26442" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, a unary operator is an operator that operates on only one operand or value. | For example, the unary minus operator (-) can be used to negate a number. In the following example, the unary minus operator is used to negate the value of the variable x:
+```
+val x = 10
+val y = -x
+```
+In this example, the value of y will be -10. Other examples of unary operators in Kotlin include the increment (++) and decrement (--) operators.">unary operator</a> takes a single value as the operand.</p>
+<ul>
+<li>A<strong> unary plus</strong> just gives you a value. It is an optional operator, so you omit it in practice:</li>
+</ul>
+<pre><code class="language-kotlin">println(+5) // prints 5
+println(+(-5)) // prints -5
+</code></pre>
+<ul>
+<li>A <strong>unary minus</strong> negates a value or expression:</li>
+</ul>
+<pre><code class="language-kotlin">println(-8)  // prints -8
+println(-(100 + 4)) // prints -104</code></pre>
+<p>They both have <strong><a class="theory-lookup" href="/learn/step/14438" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, higher precedence refers to the order in which operations are performed in an expression. | Operators with higher precedence are evaluated before those with lower precedence. For example, multiplication has higher precedence than addition, so if you have an expression like 2 + 3 \* 4, the multiplication will be performed first, resulting in 14 + 3 = 17. Parentheses can be used to increase the priority of an operation or to make the code clearer.">higher precedence</a> </strong>than the multiplication and division operators.</p>
+<h5 id="precedence-order" style="text-align: center;">Precedence order</h5>
+<p>Take a look at the <a class="theory-lookup" href="/learn/step/14438" rel="noopener noreferrer nofollow" target="_blank" title="In Kotlin, the precedence order determines how operators are grouped in the absence of parentheses. | The four main logical operators in Kotlin are not, exclusive or, and, and or. Precedence is higher for not, followed by exclusive or, and then and and or. Multiplication and addition have higher precedence than logical operators, so they are calculated first. Parentheses can be used to increase the priority of an operation or for clarity. It's also important to note the difference between prefix and postfix forms of increment and decrement operations.">precedence order</a> of arithmetic operators, including parentheses. The list is sorted from the highest to the lowest priority.</p>
+<ol>
+<li>Parentheses;</li>
+<li>Unary plus/minus;</li>
+<li>Multiplication, division, and modulus;</li>
+<li>Addition and subtraction.</li>
+</ol>
+<p>Mind this order: it's important for correct calculations. Also, you can use the acronym BODMAS (Brackets, Order, Division, Multiplication, Addition, Subtraction) to remember priority.</p>
+<h5 id="conclusion" style="text-align: center;">Conclusion</h5>
+<p>In this topic, we have covered five main arithmetic operations (<code class="language-kotlin">+</code>, <code class="language-kotlin">-</code>, <code class="language-kotlin">*</code>, <code class="language-kotlin">/</code>, and <code class="language-kotlin">%</code>). Of course, you can combine them into complex expressions with parenthesis (to simplify the notation) and with unary operators. However, mind the precedence. The good news is that in Kotlin, the precedence order follows the rules you've learned in high school.</p>
+</div>
